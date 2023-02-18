@@ -73,3 +73,39 @@ document.getElementById('parallelogram-btn').addEventListener('click', function(
 
    commonElements(nameOfItem, areaOfParallelogram);
 });
+document.getElementById('rhombus-btn').addEventListener('click', function(){
+    serial +=1;
+    const nameOfItem = getData('rhombus-title');
+    const baseField = firstInput('rhombus-d1');
+    const heightField = secondInput('rhombus-d2');
+   const areaOfParallelogram = 0.5 * parseFloat(baseField) * parseFloat(heightField);
+
+   commonElements(nameOfItem, areaOfParallelogram);
+});
+
+document.getElementById('pentagon-btn').addEventListener('click', function(){
+    serial +=1;
+    const nameOfItem = getData('pentagon-title');
+    const baseField = firstInput('pentagon-width');
+    const heightField = secondInput('pentagon-height');
+   const areaOfParallelogram = 0.5 * parseFloat(baseField) * parseFloat(heightField);
+
+   commonElements(nameOfItem, areaOfParallelogram);
+});
+document.getElementById('ellipse-btn').addEventListener('click', function(){
+    serial +=1;
+    const pi = 3.14;
+    const nameOfItem = getData('ellipse-title');
+    const baseField = firstInput('ellipse-a');
+    const heightField = secondInput('ellipse-b');
+   const areaOfEllipseWithoutPrecision = pi * parseFloat(baseField) * parseFloat(heightField);
+   const areaOfEllipse = areaOfEllipseWithoutPrecision.toFixed(2);
+
+   commonElements(nameOfItem, areaOfEllipse);
+});
+
+
+document.getElementById('get-btn').addEventListener('click', function(){
+    window.location.href = 'question.html'
+})
+
