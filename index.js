@@ -55,3 +55,21 @@ function secondInput(id){
         value= '';
     }
 }
+document.getElementById('rectangle-btn').addEventListener('click', function(){
+    serial +=1;
+    const nameOfItem = getData('rectangle-title');
+    const baseField = firstInput('rectangle-width');
+    const heightField = secondInput('rectangle-length');
+   const areaOfRectangle = parseFloat(baseField) * parseFloat(heightField);
+
+   commonElements(nameOfItem, areaOfRectangle);
+});
+document.getElementById('parallelogram-btn').addEventListener('click', function(){
+    serial +=1;
+    const nameOfItem = getData('parallelogram-title');
+    const baseField = firstInput('parallelogram-base');
+    const heightField = secondInput('parallelogram-height');
+   const areaOfParallelogram = parseFloat(baseField) * parseFloat(heightField);
+
+   commonElements(nameOfItem, areaOfParallelogram);
+});
