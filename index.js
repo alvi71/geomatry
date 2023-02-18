@@ -64,6 +64,7 @@ document.getElementById('rectangle-btn').addEventListener('click', function(){
 
    commonElements(nameOfItem, areaOfRectangle);
 });
+
 document.getElementById('parallelogram-btn').addEventListener('click', function(){
     serial +=1;
     const nameOfItem = getData('parallelogram-title');
@@ -107,5 +108,37 @@ document.getElementById('ellipse-btn').addEventListener('click', function(){
 
 document.getElementById('get-btn').addEventListener('click', function(){
     window.location.href = 'question.html'
+})
+// mouseleave card background color change function
+function cardBackgroundColor(){
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let bgColor = 'rgb(' + r + ' ' + g + ' ' + b;
+    return bgColor;
+}
+// set backgroundColor on card item
+function setBackgroundColor(elementId){
+    const setBackground = document.getElementById(elementId);
+    setBackground.style.backgroundColor = cardBackgroundColor();
+}
+
+document.getElementById('card-1').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-1');
+})
+document.getElementById('card-2').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-2');
+})
+document.getElementById('card-3').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-3');
+})
+document.getElementById('card-4').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-4');
+})
+document.getElementById('card-5').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-5');
+})
+document.getElementById('card-6').addEventListener('mouseleave',function(){
+    setBackgroundColor('card-6');
 })
 
